@@ -1,22 +1,9 @@
 <script lang="ts">
-	import { invalidate } from '$app/navigation';
-	import { onMount } from 'svelte';
 	import { Toaster } from '$lib/components/ui/sonner/index.js';
 
 	import '../app.css';
 
-	let { data, children } = $props();
-	let { session, supabase } = $derived(data);
-
-	onMount(() => {
-		const { data } = supabase.auth.onAuthStateChange((_, newSession) => {
-			if (newSession?.expires_at !== session?.expires_at) {
-				invalidate('supabase:auth');
-			}
-		});
-
-		return () => data.subscription.unsubscribe();
-	});
+	let { children } = $props();
 </script>
 
 <svelte:head>

@@ -15,7 +15,7 @@
 			</nav>
 
 			<div class="space-x-2">
-				<Button href="/auth/login">Open App</Button>
+				<Button href="https://app.luminapdf.xyz">Open App</Button>
 			</div>
 		</div>
 	</div>
