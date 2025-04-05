@@ -1,4 +1,5 @@
 <script>
+	import { PUBLIC_APP_URL } from '$env/static/public';
 	import Button from '@/components/ui/button/button.svelte';
 </script>
 
@@ -17,7 +18,7 @@
 			</nav>
 
 			<div class="space-x-2">
-				<Button href="https://app.luminapdf.xyz">Open App</Button>
+				<Button href={PUBLIC_APP_URL} target="_blank">Open App</Button>
 			</div>
 		</div>
 	</div>
