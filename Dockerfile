@@ -3,6 +3,7 @@ FROM oven/bun AS builder
 
 ARG PUBLIC_SUPABASE_URL
 ARG PUBLIC_SUPABASE_ANON_KEY
+ARG PUBLIC_API_DOCS_URL
 
 WORKDIR /app
 COPY package.json bun.lock ./
