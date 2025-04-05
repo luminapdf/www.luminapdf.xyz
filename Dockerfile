@@ -17,8 +17,8 @@ RUN bun run build
 # Production stage with Nginx
 FROM nginx:alpine AS production
 
-# Copy custom nginx config if needed
-# COPY nginx.conf /etc/nginx/conf.d/default.conf
+# Copy custom nginx config
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Copy static files from builder stage to nginx html directory
 COPY --from=builder /app/build /usr/share/nginx/html
