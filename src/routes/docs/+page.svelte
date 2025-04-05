@@ -1,8 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { PUBLIC_API_DOCS_URL } from '$env/static/public';
 	import LoaderCircle from 'lucide-svelte/icons/loader-circle';
-
-	const { data } = $props();
 
 	let isLoading = $state(true);
 
@@ -10,7 +9,7 @@
 		// Add the API reference element
 		const apiRef = document.createElement('script');
 		apiRef.id = 'api-reference';
-		apiRef.setAttribute('data-url', data.API_DOCS_URL);
+		apiRef.setAttribute('data-url', PUBLIC_API_DOCS_URL);
 		document.body.appendChild(apiRef);
 
 		// Add the Scalar script
