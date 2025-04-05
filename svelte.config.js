@@ -20,9 +20,6 @@ const config = {
 			precompress: true,
 			strict: true
 		}),
-		prerender: {
-			default: true,
-		},
 		alias: {
 			'@/*': './src/lib/*'
 		}
