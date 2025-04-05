@@ -10,7 +10,9 @@
 			<nav class="hidden items-center space-x-8 md:flex">
 				<a href="/" class="text-sm font-medium text-gray-700 hover:text-primary"> Home </a>
 				<a href="#pricing" class="text-sm font-medium text-gray-700 hover:text-primary"> Pricing </a>
-				<a href="#" class="text-sm font-medium text-gray-700 hover:text-primary"> Docs </a>
+				<a href="/docs" target="_blank" class="text-sm font-medium text-gray-700 hover:text-primary">
+					Docs
+				</a>
 				<a href="#" class="text-sm font-medium text-gray-700 hover:text-primary"> Status </a>
 			</nav>
 
