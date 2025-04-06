@@ -1,10 +1,11 @@
-# Build stage
-FROM oven/bun AS builder
+FROM oven/bun AS base
 
+ARG PUBLIC_APP_URL
 ARG PUBLIC_SUPABASE_URL
 ARG PUBLIC_SUPABASE_ANON_KEY
 ARG PUBLIC_API_DOCS_URL
-ARG PUBLIC_APP_URL
+
+FROM base AS builder
 
 WORKDIR /app
 COPY package.json bun.lock ./
@@ -15,17 +16,18 @@ COPY . .
 
 RUN bun run build
 
-# Production stage with Nginx
-FROM nginx:alpine AS production
+FROM base AS production
 
-# Copy custom nginx config
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+WORKDIR /app
 
-# Copy static files from builder stage to nginx html directory
-COPY --from=builder /app/build /usr/share/nginx/html
+ENV NODE_ENV="production"
 
-# Expose port 80
-EXPOSE 80
+COPY --from=builder /app/build ./build
+COPY --from=builder /app/package.json .
+COPY --from=builder /app/bun.lock .
 
-# Nginx starts automatically in this image
-CMD ["nginx", "-g", "daemon off;"]
+RUN bun install --production
+
+EXPOSE 3000
+
+CMD ["bun", "run", "build/index.js"]
