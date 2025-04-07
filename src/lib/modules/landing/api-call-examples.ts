@@ -1,77 +1,65 @@
+import { PUBLIC_API_URL } from '$env/static/public';
+
 export const apiCallExamples: Record<string, any> = {
 	bash: {
-		pdf: `curl -X POST "https://api.docushoot.com/v1/pdf" \\
+		pdf: `curl -X POST "${PUBLIC_API_URL}/generate/pdf" \\
 -H "Authorization: Bearer YOUR_API_KEY" \\
 -H "Content-Type: application/json" \\
 -d '{
-  "url": "https://example.com",
-  "options": {
-    "format": "A4",
-    "margin": "20px"
-  }
+  "source": "https://en.wikipedia.org/wiki/PDF",
+  "format": "A4"
 }'`,
-		screenshot: `curl -X POST "https://api.docushoot.com/v1/screenshot" \\
+		screenshot: `curl -X POST "${PUBLIC_API_URL}/generate/screenshot" \\
 -H "Authorization: Bearer YOUR_API_KEY" \\
 -H "Content-Type: application/json" \\
 -d '{
-  "url": "https://example.com",
-  "options": {
-    "width": 1920,
-    "height": 1080,
-    "fullPage": true
-  }
+  "source": "https://en.wikipedia.org/wiki/PDF",
+  "width": 1920,
+  "height": 1080,
+  "fullPage": true
 }'`
 	},
 	javascript: {
-		pdf: `const response = await fetch('https://api.docushoot.com/v1/pdf', {
-method: 'POST',
-headers: {
-  'Authorization': 'Bearer YOUR_API_KEY',
-  'Content-Type': 'application/json',
-},
-body: JSON.stringify({
-  url: 'https://example.com',
-  options: {
-    format: 'A4',
-    margin: '20px'
-  }
-})
-});
+		pdf: `const response = await fetch('${PUBLIC_API_URL}/generate/pdf', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer YOUR_API_KEY'
+      },
+      body: JSON.stringify({
+        source: 'https://en.wikipedia.org/wiki/PDF',
+        format: 'A4',
+      })
+  })
 
-const pdf = await response.blob();`,
-		screenshot: `const response = await fetch('https://api.docushoot.com/v1/screenshot', {
-method: 'POST',
-headers: {
-  'Authorization': 'Bearer YOUR_API_KEY',
-  'Content-Type': 'application/json',
-},
-body: JSON.stringify({
-  url: 'https://example.com',
-  options: {
+const pdfFile = await response.blob()`,
+		screenshot: `const response = await fetch('${PUBLIC_API_URL}/generate/screenshot', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+    'Authorization': 'Bearer YOUR_API_KEY',
+  },
+  body: JSON.stringify({
+    source: 'https://en.wikipedia.org/wiki/PDF',
     width: 1920,
     height: 1080,
     fullPage: true
-  }
-})
-});
-
+  });
+  
 const screenshot = await response.blob();`
 	},
 	python: {
 		pdf: `import requests
 
 response = requests.post(
-  'https://api.docushoot.com/v1/pdf',
+  '${PUBLIC_API_URL}/generate/pdf',
   headers={
       'Authorization': 'Bearer YOUR_API_KEY',
       'Content-Type': 'application/json'
   },
   json={
-      'url': 'https://example.com',
-      'options': {
-          'format': 'A4',
-          'margin': '20px'
-      }
+      'source': 'https://en.wikipedia.org/wiki/PDF',
+      'format': 'A4'
   }
 )
 
@@ -79,18 +67,16 @@ pdf_content = response.content`,
 		screenshot: `import requests
 
 response = requests.post(
-  'https://api.docushoot.com/v1/screenshot',
+  '${PUBLIC_API_URL}/generate/screenshot',
   headers={
       'Authorization': 'Bearer YOUR_API_KEY',
       'Content-Type': 'application/json'
   },
   json={
-      'url': 'https://example.com',
-      'options': {
-          'width': 1920,
-          'height': 1080,
-          'fullPage': True
-      }
+      'source': 'https://en.wikipedia.org/wiki/PDF',
+      'width': 1920,
+      'height': 1080,
+      'fullPage': True
   }
 )
 
@@ -108,16 +94,13 @@ import (
 
 func main() {
   data := map[string]interface{}{
-      "url": "https://example.com",
-      "options": map[string]interface{}{
-          "format": "A4",
-          "margin": "20px",
-      },
+      "source": "https://en.wikipedia.org/wiki/PDF",
+      "format": "A4",
   }
   
   jsonData, _ := json.Marshal(data)
   
-  req, _ := http.NewRequest("POST", "https://api.docushoot.com/v1/pdf", bytes.NewBuffer(jsonData))
+  req, _ := http.NewRequest("POST", "${PUBLIC_API_URL}/generate/pdf", bytes.NewBuffer(jsonData))
   req.Header.Set("Authorization", "Bearer YOUR_API_KEY")
   req.Header.Set("Content-Type", "application/json")
   
@@ -138,17 +121,15 @@ import (
 
 func main() {
   data := map[string]interface{}{
-      "url": "https://example.com",
-      "options": map[string]interface{}{
-          "width": 1920,
-          "height": 1080,
-          "fullPage": true,
-      },
+      "source": "https://en.wikipedia.org/wiki/PDF",
+      "width": 1920,
+      "height": 1080,
+      "fullPage": true,
   }
   
   jsonData, _ := json.Marshal(data)
   
-  req, _ := http.NewRequest("POST", "https://api.docushoot.com/v1/screenshot", bytes.NewBuffer(jsonData))
+  req, _ := http.NewRequest("POST", "${PUBLIC_API_URL}/generate/screenshot", bytes.NewBuffer(jsonData))
   req.Header.Set("Authorization", "Bearer YOUR_API_KEY")
   req.Header.Set("Content-Type", "application/json")
   
