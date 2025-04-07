@@ -1,5 +1,5 @@
 <script>
-	import { PUBLIC_APP_URL } from '$env/static/public';
+	import { PUBLIC_DASHBOARD_URL } from '$env/static/public';
 	import Button from '@/components/ui/button/button.svelte';
 </script>
 
@@ -18,7 +18,7 @@
 			</nav>
 
 			<div class="space-x-2">
-				<Button href={PUBLIC_APP_URL} target="_blank">Open App</Button>
+				<Button href={PUBLIC_DASHBOARD_URL} target="_blank">Open App</Button>
 			</div>
 		</div>
 	</div>

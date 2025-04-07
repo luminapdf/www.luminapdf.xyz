@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { PUBLIC_APP_DOMAIN } from '$env/static/public';
 	import { Toaster } from '$lib/components/ui/sonner/index.js';
 
 	import '../app.css';
@@ -20,13 +21,14 @@
 	<meta name="author" content="LuminaPDF" />
 
 	<!-- Open Graph / Social Media -->
+	<meta property="og:site_name" content="LuminaPDF" />
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="LuminaPDF - PDF Generation & Screenshot API" />
 	<meta
 		property="og:description"
 		content="Transform web content into perfect PDFs and screenshots with LuminaPDF. Powerful API with pay-as-you-go pricing."
 	/>
-	<!-- <meta property="og:image" content="/og-image.png" /> -->
+	<meta property="og:image" content="{PUBLIC_APP_DOMAIN}/og-image.jpeg" />
 	<meta property="og:url" content="https://luminapdf.xyz" />
 
 	<!-- Twitter Card -->
@@ -36,8 +38,9 @@
 		name="twitter:description"
 		content="Transform web content into perfect PDFs and screenshots with LuminaPDF. Powerful API with pay-as-you-go pricing."
 	/>
-	<!-- <meta name="twitter:image" content="/og-image.png" /> -->
+	<meta name="twitter:image" content="{PUBLIC_APP_DOMAIN}/og-image.jpeg" />
 </svelte:head>
 
 <Toaster />
+
 {@render children()}
