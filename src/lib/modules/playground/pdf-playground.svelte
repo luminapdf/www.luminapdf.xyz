@@ -148,7 +148,7 @@
 		<div
 			use:turnstile
 			turnstile-sitekey={PUBLIC_TURNSTILE_SITE_KEY}
-			turnstile-theme="auto"
+			turnstile-theme="light"
 			turnstile-size="normal"
 			turnstile-language="en"
 			turnstile-response-field-name="token"
