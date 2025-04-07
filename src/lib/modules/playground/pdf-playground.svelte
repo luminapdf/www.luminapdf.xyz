@@ -47,7 +47,12 @@
 
 						if (!response.ok) {
 							const error = await response.json();
-							toast.error(error.error || 'Failed to generate PDF');
+							if (response.status === 429) {
+								toast.error(`Rate limit exceeded: ${error.message}`);
+							} else {
+								toast.error(error.error || 'Failed to generate PDF');
+							}
+							return;
 						}
 
 						// Get blob from response

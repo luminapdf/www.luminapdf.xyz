@@ -2,6 +2,14 @@ import { z } from 'zod';
 import { env } from '$env/dynamic/private';
 import { PUBLIC_API_URL } from '$env/static/public';
 
+// In-memory rate limiting store
+// Maps IP address to an array of timestamps
+const rateLimitMap = new Map<string, number[]>();
+
+// Rate limit configuration: 3 requests per minute
+const RATE_LIMIT = 3;
+const RATE_LIMIT_WINDOW_MS = 60 * 1000; // 1 minute in milliseconds
+
 const schema = z.object({
 	source: z.string().url(),
 	type: z.enum(['screenshot', 'pdf']),
@@ -24,6 +32,38 @@ export const POST = async ({ request, getClientAddress }) => {
 	}
 
 	const ipAddress = getClientAddress();
+
+	// Apply rate limiting
+	const now = Date.now();
+	const userRequests = rateLimitMap.get(ipAddress) || [];
+
+	// Remove requests older than the rate limit window
+	const recentRequests = userRequests.filter((timestamp) => now - timestamp < RATE_LIMIT_WINDOW_MS);
+
+	// Check if user has exceeded rate limit
+	if (recentRequests.length >= RATE_LIMIT) {
+		// Calculate time until next available request slot
+		const oldestRequest = recentRequests[0];
+		const resetTime = oldestRequest + RATE_LIMIT_WINDOW_MS;
+		const timeToReset = Math.ceil((resetTime - now) / 1000);
+
+		return new Response(
+			JSON.stringify({
+				error: 'Rate limit exceeded',
+				message: `Too many requests. Please try again in ${timeToReset} seconds.`
+			}),
+			{
+				status: 429,
+				headers: {
+					'Retry-After': String(timeToReset)
+				}
+			}
+		);
+	}
+
+	// Add current request timestamp and update the map
+	recentRequests.push(now);
+	rateLimitMap.set(ipAddress, recentRequests);
 
 	// Validate the token by calling the
 	// "/siteverify" API endpoint.
