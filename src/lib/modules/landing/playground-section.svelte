@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Playground from '@/components/playground.svelte';
+	import Playground from '@/modules/playground/playground.svelte';
 </script>
 
 <section class="bg-gray-50 px-6 py-16">
