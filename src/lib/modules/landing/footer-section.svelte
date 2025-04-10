@@ -31,18 +31,14 @@
 				<h4 class="mb-4 font-semibold text-white">Company</h4>
 				<ul class="space-y-2 text-sm">
 					<li><a href="#" class="hover:text-primary">About</a></li>
-					<li><a href="#" class="hover:text-primary">Blog</a></li>
-					<li><a href="#" class="hover:text-primary">Careers</a></li>
 					<li><a href="#" class="hover:text-primary">Contact</a></li>
 				</ul>
 			</div>
 			<div>
 				<h4 class="mb-4 font-semibold text-white">Legal</h4>
 				<ul class="space-y-2 text-sm">
-					<li><a href="#" class="hover:text-primary">Privacy Policy</a></li>
-					<li><a href="#" class="hover:text-primary">Terms of Service</a></li>
-					<li><a href="#" class="hover:text-primary">Cookie Policy</a></li>
-					<li><a href="#" class="hover:text-primary">Security</a></li>
+					<li><a href="/legal/privacy-policy" class="hover:text-primary">Privacy Policy</a></li>
+					<li><a href="/legal/terms-of-service" class="hover:text-primary">Terms of Service</a></li>
 				</ul>
 			</div>
 		</div>
