@@ -2,6 +2,8 @@
 	import PricingCalculator from '@/components/pricing-calculator.svelte';
 	import PricingCard from '@/components/pricing-card.svelte';
 	import { Chip } from '@/components/ui/chip';
+	import { PUBLIC_PDF_GENERATION_COST, PUBLIC_SCREENSHOT_GENERATION_COST } from '$env/static/public';
+	import { centsToDollars, formatCurrency } from '$lib/helpers/currency';
 
 	const freePlan = {
 		name: 'Free',
@@ -18,11 +20,11 @@
 
 	const pricingPlan = {
 		name: 'Pay As You Go',
-		price: 'From $0.005',
+		price: `From ${formatCurrency(centsToDollars(Number(PUBLIC_SCREENSHOT_GENERATION_COST)))}`,
 		description: 'For professional use',
 		features: [
-			'$0.008 per PDF generation',
-			'$0.005 per screenshot',
+			`${formatCurrency(centsToDollars(Number(PUBLIC_PDF_GENERATION_COST)))} per PDF generation`,
+			`${formatCurrency(centsToDollars(Number(PUBLIC_SCREENSHOT_GENERATION_COST)))} per screenshot`,
 			'Unlimited file size',
 			'Timeout: up to 15 minutes',
 			'No monthly commitment',

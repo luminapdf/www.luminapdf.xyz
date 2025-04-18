@@ -44,7 +44,7 @@
 		<div class="mt-4">
 			<span class="text-4xl font-bold text-gray-900">{price}</span>
 			{#if price !== 'Custom' && price !== '$0'}
-				<span class="text-gray-600">/unit</span>
+				<span class="text-gray-600">/generation</span>
 			{/if}
 		</div>
 		<p class="mt-3 text-gray-600">{description}</p>
