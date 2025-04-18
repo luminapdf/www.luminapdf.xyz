@@ -25,16 +25,16 @@
 			<div>
 				<h4 class="mb-4 font-semibold text-white">Product</h4>
 				<ul class="space-y-2 text-sm">
-					<li><a href="#features" class="hover:text-primary">Features</a></li>
-					<li><a href="#pricing" class="hover:text-primary">Pricing</a></li>
-					<li><a href="/docs" class="hover:text-primary">Documentation</a></li>
+					<li><a href="/#features" class="hover:text-primary">Features</a></li>
+					<li><a href="/#pricing" class="hover:text-primary">Pricing</a></li>
+					<li><a href="/docs" target="_blank" class="hover:text-primary">Documentation</a></li>
 				</ul>
 			</div>
 			<div>
 				<h4 class="mb-4 font-semibold text-white">Company</h4>
 				<ul class="space-y-2 text-sm">
-					<li><a href="#" class="hover:text-primary">About</a></li>
-					<li><a href="#" class="hover:text-primary">Contact</a></li>
+					<li><a href="/about" class="hover:text-primary">About</a></li>
+					<li><a href="mailto:yusril@izza.dev" class="hover:text-primary">Contact</a></li>
 				</ul>
 			</div>
 			<div>

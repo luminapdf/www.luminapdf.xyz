@@ -64,7 +64,7 @@
 		<div class="mt-16 text-center">
 			<p class="text-sm text-gray-600">
 				All prices are in USD. Need a custom plan for high volume?{' '}
-				<a href="#" class="font-medium text-primary hover:underline"> Contact us </a>
+				<a href="mailto:yusril@izza.dev" class="font-medium text-primary hover:underline"> Contact us </a>
 			</p>
 		</div>
 	</div>

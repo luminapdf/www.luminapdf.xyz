@@ -131,6 +131,7 @@
 						min={100}
 						max={2160}
 						placeholder="1080"
+						disabled={$formData.fullPage}
 					/>
 				{/snippet}
 			</Form.Control>

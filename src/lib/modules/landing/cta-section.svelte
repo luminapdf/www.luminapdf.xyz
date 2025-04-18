@@ -1,3 +1,7 @@
+<script lang="ts">
+	import { PUBLIC_DASHBOARD_URL } from '$env/static/public';
+</script>
+
 <section class="px-6 py-24">
 	<div class="container mx-auto">
 		<div class="relative overflow-hidden rounded-2xl bg-primary p-8 shadow-xl sm:p-16">
@@ -10,7 +14,7 @@
 						Start generating perfect PDFs and screenshots with LuminaPDF. Your first 50 generations are free.
 					</p>
 					<a
-						href="#"
+						href={PUBLIC_DASHBOARD_URL}
 						class="inline-flex items-center rounded-lg bg-white px-6 py-3 text-sm font-medium text-primary shadow-lg transition-all hover:bg-gray-50 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary"
 					>
 						Get Started Now
@@ -19,7 +23,7 @@
 			</div>
 			<div
 				class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-primary-light via-primary to-primary-dark opacity-50"
-			/>
+			></div>
 		</div>
 	</div>
 </section>

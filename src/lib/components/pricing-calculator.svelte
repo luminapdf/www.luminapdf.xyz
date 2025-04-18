@@ -32,7 +32,8 @@
 						id="pdf-input"
 						type="number"
 						value={pdfCount}
-						onchange={(e: any) => (pdfCount = parseInt(e.target.value))}
+						oninput={(e: any) => (pdfCount = Math.max(0, parseInt(e.target.value) || 0))}
+						min="0"
 						class="w-full rounded-lg border border-gray-300 px-3 py-1.5 text-right text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
 					/>
 				</div>
@@ -47,13 +48,14 @@
 
 		<div>
 			<div class="mb-2 flex items-center justify-between">
-				<label for="screenshoot-input" class="block text-sm font-medium text-gray-700"> Screenshots: </label>
+				<label for="screenshot-input" class="block text-sm font-medium text-gray-700"> Screenshots: </label>
 				<div class="relative w-32">
 					<input
 						id="screenshot-input"
 						type="number"
 						value={screenshotCount}
-						onchange={(e: any) => (screenshotCount = parseInt(e.target.value))}
+						oninput={(e: any) => (screenshotCount = Math.max(0, parseInt(e.target.value) || 0))}
+						min="0"
 						class="w-full rounded-lg border border-gray-300 px-3 py-1.5 text-right text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
 					/>
 				</div>

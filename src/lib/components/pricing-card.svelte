@@ -27,7 +27,7 @@
 
 <div
 	class={cn(
-		'relative flex h-full flex-col overflow-hidden rounded-2xl bg-white p-8 shadow-lg transition-all',
+		'relative flex h-full flex-col overflow-hidden rounded-2xl bg-white p-8 shadow-lg transition-all hover:scale-[1.02] hover:shadow-xl',
 		isPopular
 			? 'border-2 border-primary ring-4 ring-primary/10'
 			: 'border border-gray-100 hover:border-gray-200',
