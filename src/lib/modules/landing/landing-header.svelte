@@ -26,7 +26,7 @@
 				<a href="/docs" target="_blank" class="text-sm font-medium text-gray-700 hover:text-primary">
 					Docs
 				</a>
-				<a href="/status" class="text-sm font-medium text-gray-700 hover:text-primary"> Status </a>
+				<a href="#" class="text-sm font-medium text-gray-700 hover:text-primary"> Status </a>
 			</nav>
 
 			<div class="flex items-center gap-2">
@@ -76,7 +76,7 @@
 					Docs
 				</a>
 				<a
-					href="/status"
+					href="#"
 					onclick={closeMobileMenu}
 					class="block rounded px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-primary"
 				>
