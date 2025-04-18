@@ -48,6 +48,7 @@
 		"svelte-check": "^4.1.5",
 		"svelte-highlight": "^7.8.2",
 		"svelte-sonner": "^0.3.28",
+		"svelte-typewriter": "^3.2.3",
 		"sveltekit-superforms": "^2.24.1",
 		"tailwind-merge": "^3.0.2",
 		"tailwind-variants": "^0.3.1",

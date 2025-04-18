@@ -9,6 +9,7 @@
 		features: string[];
 		isPopular?: boolean;
 		buttonText?: string;
+		buttonHref?: string;
 		class?: string;
 	}
 
@@ -19,6 +20,7 @@
 		features,
 		isPopular,
 		buttonText = 'Get Started',
+		buttonHref = '/',
 		class: className = ''
 	}: PricingCardProps = $props();
 </script>
@@ -60,7 +62,7 @@
 		{/each}
 	</ul>
 	<a
-		href="#"
+		href={buttonHref}
 		class={cn(
 			'inline-flex w-full items-center justify-center rounded-xl px-6 py-3.5 text-center font-medium transition-all',
 			isPopular

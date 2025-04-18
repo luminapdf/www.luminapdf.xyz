@@ -2,7 +2,11 @@
 	import PricingCalculator from '@/components/pricing-calculator.svelte';
 	import PricingCard from '@/components/pricing-card.svelte';
 	import { Chip } from '@/components/ui/chip';
-	import { PUBLIC_PDF_GENERATION_COST, PUBLIC_SCREENSHOT_GENERATION_COST } from '$env/static/public';
+	import {
+		PUBLIC_PDF_GENERATION_COST,
+		PUBLIC_SCREENSHOT_GENERATION_COST,
+		PUBLIC_DASHBOARD_URL
+	} from '$env/static/public';
 	import { centsToDollars, formatCurrency } from '$lib/helpers/currency';
 
 	const freePlan = {
@@ -15,7 +19,8 @@
 			'Timeout: 30 seconds',
 			'Community support'
 		],
-		buttonText: 'Get Started'
+		buttonText: 'Get Started',
+		buttonHref: PUBLIC_DASHBOARD_URL
 	};
 
 	const pricingPlan = {
@@ -31,7 +36,8 @@
 			'Full API access',
 			'Community support'
 		],
-		buttonText: 'Choose Plan'
+		buttonText: 'Choose Plan',
+		buttonHref: PUBLIC_DASHBOARD_URL
 	};
 </script>
 

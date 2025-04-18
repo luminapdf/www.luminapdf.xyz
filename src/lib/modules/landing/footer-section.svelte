@@ -1,8 +1,12 @@
 <script lang="ts">
-	import Twitter from 'lucide-svelte/icons/twitter';
+	// import Twitter from 'lucide-svelte/icons/twitter';
 	import Github from 'lucide-svelte/icons/github';
-	import Linkedin from 'lucide-svelte/icons/linkedin';
+	// import Linkedin from 'lucide-svelte/icons/linkedin';
 	import Mail from 'lucide-svelte/icons/mail';
+
+	function mailTo() {
+		window.location.href = 'mailto:yusril@izza.dev';
+	}
 </script>
 
 <footer class="bg-gray-900 px-6 py-12 text-gray-300">
@@ -12,19 +16,18 @@
 				<h3 class="mb-4 text-lg font-semibold text-white">LuminaPDF</h3>
 				<p class="mb-4 text-sm">Powerful PDF and screenshot API with simple, transparent pricing.</p>
 				<div class="flex gap-4">
-					<a href="#" class="hover:text-primary"><Twitter size={20} /></a>
-					<a href="#" class="hover:text-primary"><Github size={20} /></a>
-					<a href="#" class="hover:text-primary"><Linkedin size={20} /></a>
-					<a href="#" class="hover:text-primary"><Mail size={20} /></a>
+					<!-- <a href="#" class="hover:text-primary"><Twitter size={20} /></a> -->
+					<a href="https://github.com/luminapdf" class="hover:text-primary"><Github size={20} /></a>
+					<!-- <a href="#" class="hover:text-primary"><Linkedin size={20} /></a> -->
+					<button onclick={mailTo} class="hover:text-primary"><Mail size={20} /></button>
 				</div>
 			</div>
 			<div>
 				<h4 class="mb-4 font-semibold text-white">Product</h4>
 				<ul class="space-y-2 text-sm">
-					<li><a href="#" class="hover:text-primary">Features</a></li>
-					<li><a href="#" class="hover:text-primary">Pricing</a></li>
-					<li><a href="#" class="hover:text-primary">Documentation</a></li>
-					<li><a href="#" class="hover:text-primary">API Reference</a></li>
+					<li><a href="#features" class="hover:text-primary">Features</a></li>
+					<li><a href="#pricing" class="hover:text-primary">Pricing</a></li>
+					<li><a href="/docs" class="hover:text-primary">Documentation</a></li>
 				</ul>
 			</div>
 			<div>

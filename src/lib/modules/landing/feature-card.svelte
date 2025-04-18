@@ -12,7 +12,10 @@
 	const { icon, title, description, chip }: FeatureCardProps = $props();
 </script>
 
-<div class="group relative overflow-hidden rounded-xl bg-white p-6 shadow-lg transition-all hover:shadow-xl">
+<div
+	id="features"
+	class="group relative overflow-hidden rounded-xl bg-white p-6 shadow-lg transition-all hover:shadow-xl"
+>
 	<div
 		class="absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent opacity-0 transition-opacity group-hover:opacity-100"
 	></div>

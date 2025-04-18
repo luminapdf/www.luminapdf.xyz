@@ -21,7 +21,7 @@
 			// Sometimes there's a slight delay before Scalar renders
 			setTimeout(() => {
 				isLoading = false;
-			}, 1000);
+			}, 2000);
 		};
 
 		document.body.appendChild(scalarScript);
