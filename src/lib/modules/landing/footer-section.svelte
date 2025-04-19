@@ -33,7 +33,7 @@
 			<div>
 				<h4 class="mb-4 font-semibold text-white">Company</h4>
 				<ul class="space-y-2 text-sm">
-					<li><a href="/about" class="hover:text-primary">About</a></li>
+					<li><a href="#" class="hover:text-primary">About</a></li>
 					<li><a href="mailto:yusril@izza.dev" class="hover:text-primary">Contact</a></li>
 				</ul>
 			</div>
