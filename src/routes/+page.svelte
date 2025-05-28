@@ -10,6 +10,7 @@
 	import PricingSection from '@/modules/landing/pricing-section.svelte';
 	import FeatureSection from '@/modules/landing/feature-section.svelte';
 	import PlaygroundSection from '@/modules/landing/playground-section.svelte';
+	import UseCases from '@/modules/landing/use-cases.svelte';
 
 	// Intersection Observer for scroll animations
 	onMount(() => {
@@ -53,6 +54,10 @@
 
 	<div class="animate-on-scroll translate-y-4 opacity-0 transition-all delay-100 duration-700 ease-out">
 		<FeatureSection />
+	</div>
+
+	<div class="animate-on-scroll translate-y-4 opacity-0 transition-all delay-100 duration-700 ease-out">
+		<UseCases />
 	</div>
 
 	<div class="animate-on-scroll translate-y-4 opacity-0 transition-all delay-100 duration-700 ease-out">
