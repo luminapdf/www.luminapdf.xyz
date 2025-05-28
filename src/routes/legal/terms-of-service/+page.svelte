@@ -1,5 +1,5 @@
 <script lang="ts">
-	// No imports needed
+	import LegalLayout from '$lib/components/legal-layout.svelte';
 </script>
 
 <svelte:head>
@@ -10,158 +10,153 @@
 	/>
 </svelte:head>
 
-<div class="bg-white py-12 md:py-20">
-	<div class="container mx-auto px-6">
-		<div class="prose prose-slate mx-auto max-w-4xl">
-			<h1 class="mb-8 text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">Terms of Service</h1>
-			<p class="mb-6 text-sm text-slate-500">Last Updated: August 15, 2024</p>
+<LegalLayout title="Terms of Service" lastUpdated="August 15, 2024">
+	<div class="space-y-8">
+		<section>
+			<h2 class="text-2xl font-semibold">1. Introduction</h2>
+			<p class="mt-4">
+				Welcome to LuminaPDF. These Terms of Service ("Terms") govern your access to and use of
+				LuminaPDF's website, services, and API (collectively, the "Services"). Please read these Terms
+				carefully before using our Services.
+			</p>
+			<p class="mt-3">
+				By accessing or using our Services, you agree to be bound by these Terms. If you do not agree to
+				these Terms, you may not access or use the Services.
+			</p>
+		</section>
 
-			<div class="space-y-8">
-				<section>
-					<h2 class="text-2xl font-semibold text-slate-900">1. Introduction</h2>
-					<p>
-						Welcome to LuminaPDF. These Terms of Service ("Terms") govern your access to and use of
-						LuminaPDF's website, services, and API (collectively, the "Services"). Please read these Terms
-						carefully before using our Services.
-					</p>
-					<p>
-						By accessing or using our Services, you agree to be bound by these Terms. If you do not agree to
-						these Terms, you may not access or use the Services.
-					</p>
-				</section>
+		<section>
+			<h2 class="text-2xl font-semibold">2. Definitions</h2>
+			<p class="mt-4">Throughout these Terms, the following terms have these meanings:</p>
+			<ul class="mt-2 list-disc pl-6 space-y-2">
+				<li><span class="font-medium">"We," "our," "us," or "LuminaPDF"</span> refers to the company operating the Services.</li>
+				<li><span class="font-medium">"You" or "your"</span> refers to the individual or entity using our Services.</li>
+				<li><span class="font-medium">"Content"</span> refers to any material generated, accessed, or uploaded through our Services.</li>
+				<li>
+					<span class="font-medium">"API"</span> refers to our application programming interface that allows you to programmatically access
+					our Services.
+				</li>
+			</ul>
+		</section>
 
-				<section>
-					<h2 class="text-2xl font-semibold text-slate-900">2. Definitions</h2>
-					<p>Throughout these Terms, the following terms have these meanings:</p>
-					<ul>
-						<li>"We," "our," "us," or "LuminaPDF" refers to the company operating the Services.</li>
-						<li>"You" or "your" refers to the individual or entity using our Services.</li>
-						<li>"Content" refers to any material generated, accessed, or uploaded through our Services.</li>
-						<li>
-							"API" refers to our application programming interface that allows you to programmatically access
-							our Services.
-						</li>
-					</ul>
-				</section>
+		<section>
+			<h2 class="text-2xl font-semibold">3. Account Registration</h2>
+			<p class="mt-4">
+				To use certain features of our Services, you may need to create an account. You agree to provide
+				accurate, current, and complete information during the registration process and to update such
+				information to keep it accurate, current, and complete.
+			</p>
+			<p class="mt-3">
+				You are responsible for safeguarding your account credentials and for all activities that occur
+				under your account. You agree to notify us immediately of any unauthorized use of your account or
+				any other breach of security.
+			</p>
+		</section>
 
-				<section>
-					<h2 class="text-2xl font-semibold text-slate-900">3. Account Registration</h2>
-					<p>
-						To use certain features of our Services, you may need to create an account. You agree to provide
-						accurate, current, and complete information during the registration process and to update such
-						information to keep it accurate, current, and complete.
-					</p>
-					<p>
-						You are responsible for safeguarding your account credentials and for all activities that occur
-						under your account. You agree to notify us immediately of any unauthorized use of your account or
-						any other breach of security.
-					</p>
-				</section>
+		<section>
+			<h2 class="text-2xl font-semibold">4. API Usage and Rate Limits</h2>
+			<p class="mt-4">
+				Our API is designed to provide PDF generation and screenshot capabilities. When using our API, you
+				agree to:
+			</p>
+			<ul class="mt-2 list-disc pl-6 space-y-2">
+				<li>Not exceed the rate limits we establish (as described in our documentation)</li>
+				<li>Not use the API in a way that could damage, disable, or impair our servers or networks</li>
+				<li>Not attempt to gain unauthorized access to any part of our Services</li>
+				<li>Not use our API to generate or distribute illegal, harmful, or offensive content</li>
+			</ul>
+			<p class="mt-3">
+				We reserve the right to modify or impose additional rate limits at any time without prior notice.
+			</p>
+		</section>
 
-				<section>
-					<h2 class="text-2xl font-semibold text-slate-900">4. API Usage and Rate Limits</h2>
-					<p>
-						Our API is designed to provide PDF generation and screenshot capabilities. When using our API, you
-						agree to:
-					</p>
-					<ul>
-						<li>Not exceed the rate limits we establish (as described in our documentation)</li>
-						<li>Not use the API in a way that could damage, disable, or impair our servers or networks</li>
-						<li>Not attempt to gain unauthorized access to any part of our Services</li>
-						<li>Not use our API to generate or distribute illegal, harmful, or offensive content</li>
-					</ul>
-					<p>
-						We reserve the right to modify or impose additional rate limits at any time without prior notice.
-					</p>
-				</section>
+		<section>
+			<h2 class="text-2xl font-semibold">5. Payments and Billing</h2>
+			<p class="mt-4">
+				We offer both free and paid plans. All accounts receive 50 free API requests each month (PDF
+				generations or screenshot captures). After you've used your free requests, additional requests
+				will require a positive balance in your account.
+			</p>
+			<p class="mt-3">
+				For paid plans, you agree to pay all fees in accordance with the rates in effect when the charges
+				were incurred. You must provide us with a valid payment method for paying all charges.
+			</p>
+			<p class="mt-3">
+				For our pay-as-you-go model, you will be charged based on your usage of our Services. We may
+				change our fees and payment structure at any time by providing notice on our website or through
+				email.
+			</p>
+			<p class="mt-3">
+				If your payment cannot be completed, we may suspend or terminate your access to paid features
+				until payment is received.
+			</p>
+		</section>
 
-				<section>
-					<h2 class="text-2xl font-semibold text-slate-900">5. Payments and Billing</h2>
-					<p>
-						We offer both free and paid plans. All accounts receive 50 free API requests each month (PDF
-						generations or screenshot captures). After you've used your free requests, additional requests
-						will require a positive balance in your account.
-					</p>
-					<p>
-						For paid plans, you agree to pay all fees in accordance with the rates in effect when the charges
-						were incurred. You must provide us with a valid payment method for paying all charges.
-					</p>
-					<p>
-						For our pay-as-you-go model, you will be charged based on your usage of our Services. We may
-						change our fees and payment structure at any time by providing notice on our website or through
-						email.
-					</p>
-					<p>
-						If your payment cannot be completed, we may suspend or terminate your access to paid features
-						until payment is received.
-					</p>
-				</section>
+		<section>
+			<h2 class="text-2xl font-semibold">6. Intellectual Property Rights</h2>
+			<p class="mt-4">
+				LuminaPDF and its licensors own all right, title, and interest in and to the Services, including
+				all intellectual property rights therein. You may not copy, modify, distribute, sell, or lease any
+				part of our Services without our permission.
+			</p>
+			<p class="mt-3">
+				You retain all rights to the content you process through our Services. By using our Services, you
+				grant us a worldwide, non-exclusive license to host, store, and use your content solely for the
+				purpose of providing the Services to you.
+			</p>
+		</section>
 
-				<section>
-					<h2 class="text-2xl font-semibold text-slate-900">6. Intellectual Property Rights</h2>
-					<p>
-						LuminaPDF and its licensors own all right, title, and interest in and to the Services, including
-						all intellectual property rights therein. You may not copy, modify, distribute, sell, or lease any
-						part of our Services without our permission.
-					</p>
-					<p>
-						You retain all rights to the content you process through our Services. By using our Services, you
-						grant us a worldwide, non-exclusive license to host, store, and use your content solely for the
-						purpose of providing the Services to you.
-					</p>
-				</section>
+		<section>
+			<h2 class="text-2xl font-semibold">7. Content Guidelines</h2>
+			<p class="mt-4">You may not use our Services to process, generate, or distribute content that:</p>
+			<ul class="mt-2 list-disc pl-6 space-y-2">
+				<li>Violates any applicable law or regulation</li>
+				<li>Infringes on intellectual property rights of others</li>
+				<li>Contains viruses, malware, or other harmful code</li>
+				<li>Is defamatory, obscene, or constitutes hate speech</li>
+				<li>Harasses, threatens, or invades the privacy of others</li>
+			</ul>
+			<p class="mt-3">
+				We reserve the right to remove any content that violates these guidelines and to suspend or
+				terminate accounts that repeatedly violate them.
+			</p>
+		</section>
 
-				<section>
-					<h2 class="text-2xl font-semibold text-slate-900">7. Content Guidelines</h2>
-					<p>You may not use our Services to process, generate, or distribute content that:</p>
-					<ul>
-						<li>Violates any applicable law or regulation</li>
-						<li>Infringes on intellectual property rights of others</li>
-						<li>Contains viruses, malware, or other harmful code</li>
-						<li>Is defamatory, obscene, or constitutes hate speech</li>
-						<li>Harasses, threatens, or invades the privacy of others</li>
-					</ul>
-					<p>
-						We reserve the right to remove any content that violates these guidelines and to suspend or
-						terminate accounts that repeatedly violate them.
-					</p>
-				</section>
+		<section>
+			<h2 class="text-2xl font-semibold">8. Data Retention and Deletion</h2>
+			<p class="mt-4">
+				We do not store generated PDFs and screenshots by default. Your data is processed and delivered to
+				you without retention. We only store your generated files if you explicitly request storage as
+				part of your service plan. In such cases, we delete these files after the specified retention
+				period (typically 24 hours, unless you're on a plan that includes longer storage periods).
+			</p>
+			<p class="mt-3">
+				You can request the deletion of your account and associated data at any time by contacting us at
+				<a href="mailto:privacy@luminapdf.xyz" class="text-primary hover:underline">privacy@luminapdf.xyz</a>. We will process your request within 30 days and delete or anonymize your
+				information, except where we need to retain certain information for legitimate business or legal
+				purposes.
+			</p>
+		</section>
 
-				<section>
-					<h2 class="text-2xl font-semibold text-slate-900">8. Data Retention and Deletion</h2>
-					<p>
-						We do not store generated PDFs and screenshots by default. Your data is processed and delivered to
-						you without retention. We only store your generated files if you explicitly request storage as
-						part of your service plan. In such cases, we delete these files after the specified retention
-						period (typically 24 hours, unless you're on a plan that includes longer storage periods).
-					</p>
-					<p>
-						You can request the deletion of your account and associated data at any time by contacting us at
-						privacy@luminapdf.xyz. We will process your request within 30 days and delete or anonymize your
-						information, except where we need to retain certain information for legitimate business or legal
-						purposes.
-					</p>
-				</section>
-
-				<section>
-					<h2 class="text-2xl font-semibold text-slate-900">9. Limitation of Liability</h2>
-					<p>
-						To the maximum extent permitted by law, LuminaPDF shall not be liable for any indirect,
-						incidental, special, consequential, or punitive damages, or any loss of profits or revenues,
-						whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible
-						losses resulting from:
-					</p>
-					<ul>
-						<li>Your use or inability to use our Services</li>
-						<li>
-							Any unauthorized access to or use of our servers and/or any personal information stored therein
-						</li>
-						<li>Any interruption or cessation of transmission to or from our Services</li>
-						<li>
-							Any bugs, viruses, trojan horses, or the like that may be transmitted to or through our Services
-						</li>
-					</ul>
-				</section>
+		<section>
+			<h2 class="text-2xl font-semibold">9. Limitation of Liability</h2>
+			<p class="mt-4">
+				To the maximum extent permitted by law, LuminaPDF shall not be liable for any indirect,
+				incidental, special, consequential, or punitive damages, or any loss of profits or revenues,
+				whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible
+				losses resulting from:
+			</p>
+			<ul class="mt-2 list-disc pl-6 space-y-2">
+				<li>Your use or inability to use our Services</li>
+				<li>
+					Any unauthorized access to or use of our servers and/or any personal information stored therein
+				</li>
+				<li>Any interruption or cessation of transmission to or from our Services</li>
+				<li>
+					Any bugs, viruses, trojan horses, or the like that may be transmitted to or through our Services
+				</li>
+			</ul>
+		</section>
 
 				<section>
 					<h2 class="text-2xl font-semibold text-slate-900">10. Disclaimers</h2>
@@ -236,7 +231,5 @@
 						<strong>Email:</strong> legal@luminapdf.xyz
 					</p>
 				</section>
-			</div>
-		</div>
 	</div>
-</div>
+</LegalLayout>
