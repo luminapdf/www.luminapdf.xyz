@@ -12,7 +12,7 @@
 	import Check from 'lucide-svelte/icons/check';
 
 	let sectionVisible = $state(false);
-	
+
 	onMount(() => {
 		const observer = new IntersectionObserver(
 			(entries) => {
@@ -23,10 +23,10 @@
 			},
 			{ threshold: 0.1 }
 		);
-		
-		const section = document.querySelector('#pricing-section');
+
+		const section = document.querySelector('#pricing');
 		if (section) observer.observe(section);
-		
+
 		return () => observer.disconnect();
 	});
 
@@ -68,39 +68,43 @@
 	};
 </script>
 
-<section id="pricing-section" class="relative overflow-hidden px-6 py-24 sm:py-32">
+<section id="pricing" class="relative overflow-hidden px-6 py-24 sm:py-32">
 	<div class="absolute inset-0 bg-gradient-to-b from-gray-50 to-white"></div>
-	
+
 	<!-- Subtle background gradient spheres -->
 	<div
-		class="absolute right-40 top-40 z-0 h-[450px] w-[450px] rounded-full bg-gradient-to-br from-primary/5 to-indigo-100/20 opacity-40 blur-3xl animate-pulse"
+		class="absolute right-40 top-40 z-0 h-[450px] w-[450px] animate-pulse rounded-full bg-gradient-to-br from-primary/5 to-indigo-100/20 opacity-40 blur-3xl"
 		style="animation-duration: 13s;"
 	></div>
 	<div
-		class="absolute -left-20 bottom-40 z-0 h-[350px] w-[350px] rounded-full bg-gradient-to-tr from-blue-50/50 to-primary/5 opacity-30 blur-3xl animate-pulse"
+		class="absolute -left-20 bottom-40 z-0 h-[350px] w-[350px] animate-pulse rounded-full bg-gradient-to-tr from-blue-50/50 to-primary/5 opacity-30 blur-3xl"
 		style="animation-duration: 9s;"
 	></div>
 	<div class="container relative z-10 mx-auto">
 		<!-- Section header -->
-		<div 
+		<div
 			class="mb-16 text-center transition-all duration-700 ease-out"
 			class:opacity-100={sectionVisible}
 			class:translate-y-0={sectionVisible}
 			class:opacity-0={!sectionVisible}
 			class:translate-y-8={!sectionVisible}
 		>
-			<Badge variant="outline" class="mb-4 border-primary/30 bg-primary/5 text-primary font-medium">Pricing</Badge>
-			<h2 class="mb-6 bg-gradient-to-br from-gray-900 to-gray-700 bg-clip-text text-center font-display text-3xl font-bold tracking-tight text-transparent sm:text-4xl md:text-5xl">
+			<Badge variant="outline" class="mb-4 border-primary/30 bg-primary/5 font-medium text-primary"
+				>Pricing</Badge
+			>
+			<h2
+				class="font-display mb-6 bg-gradient-to-br from-gray-900 to-gray-700 bg-clip-text text-center text-3xl font-bold tracking-tight text-transparent sm:text-4xl md:text-5xl"
+			>
 				Simple, transparent pricing
 			</h2>
 			<p class="mx-auto max-w-2xl text-lg text-gray-600 sm:text-xl">
-				Pay only for what you use with no hidden fees or complicated tiers.
-				Get your first 50 generations free every month.
+				Pay only for what you use with no hidden fees or complicated tiers. Get your first 50 generations free
+				every month.
 			</p>
 		</div>
 
 		<!-- Pricing Cards -->
-		<div 
+		<div
 			class="mx-auto grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-2"
 			class:opacity-100={sectionVisible}
 			class:translate-y-0={sectionVisible}
@@ -108,15 +112,20 @@
 			class:translate-y-8={!sectionVisible}
 		>
 			<!-- Free Plan -->
-			<div class="h-full transform transition-all duration-500 ease-out hover:translate-y-[-8px]" style="transition-delay: 200ms">
-				<div class="flex h-full flex-col overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-md">
+			<div
+				class="h-full transform transition-all duration-500 ease-out hover:translate-y-[-8px]"
+				style="transition-delay: 200ms"
+			>
+				<div
+					class="flex h-full flex-col overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-md"
+				>
 					<!-- Card Header -->
 					<div class="border-b border-gray-100 p-6 text-center">
-						<h3 class="mb-2 font-display text-xl font-semibold text-gray-900">{freePlan.name}</h3>
+						<h3 class="font-display mb-2 text-xl font-semibold text-gray-900">{freePlan.name}</h3>
 						<div class="mb-1 text-3xl font-bold text-gray-900">{freePlan.price}</div>
 						<p class="text-gray-500">{freePlan.description}</p>
 					</div>
-					
+
 					<!-- Features -->
 					<div class="flex grow flex-col justify-between p-6">
 						<ul class="mb-8 space-y-4">
@@ -127,11 +136,11 @@
 								</li>
 							{/each}
 						</ul>
-						
+
 						<!-- CTA -->
-						<a 
+						<a
 							href={freePlan.buttonHref}
-							target="_blank" 
+							target="_blank"
 							rel="noopener noreferrer"
 							class="group inline-flex w-full items-center justify-center rounded-lg border border-primary/30 bg-white px-4 py-2.5 text-center text-sm font-medium text-primary shadow-sm transition-all hover:border-primary/50 hover:bg-primary/5"
 						>
@@ -140,26 +149,33 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<!-- Pro Plan -->
-			<div class="h-full transform transition-all duration-500 ease-out hover:translate-y-[-8px]" style="transition-delay: 400ms">
-				<div class="relative flex h-full flex-col overflow-hidden rounded-xl border-2 border-primary/20 bg-white shadow-md transition-shadow hover:shadow-lg">
+			<div
+				class="h-full transform transition-all duration-500 ease-out hover:translate-y-[-8px]"
+				style="transition-delay: 400ms"
+			>
+				<div
+					class="relative flex h-full flex-col overflow-hidden rounded-xl border-2 border-primary/20 bg-white shadow-md transition-shadow hover:shadow-lg"
+				>
 					<!-- Popular Badge -->
 					{#if pricingPlan.popular}
 						<div class="absolute right-0 top-0 overflow-hidden">
-							<div class="flex -translate-y-1/2 translate-x-1/2 rotate-45 transform items-center justify-center gap-1 bg-primary px-8 py-1 text-xs font-medium text-white shadow-sm">
+							<div
+								class="flex -translate-y-1/2 translate-x-1/2 rotate-45 transform items-center justify-center gap-1 bg-primary px-8 py-1 text-xs font-medium text-white shadow-sm"
+							>
 								Popular
 							</div>
 						</div>
 					{/if}
-					
+
 					<!-- Card Header -->
 					<div class="border-b border-gray-100 bg-primary/[0.03] p-6 text-center">
-						<h3 class="mb-2 font-display text-xl font-semibold text-gray-900">{pricingPlan.name}</h3>
+						<h3 class="font-display mb-2 text-xl font-semibold text-gray-900">{pricingPlan.name}</h3>
 						<div class="mb-1 text-3xl font-bold text-gray-900">{pricingPlan.price}</div>
 						<p class="text-gray-500">{pricingPlan.description}</p>
 					</div>
-					
+
 					<!-- Features -->
 					<div class="flex grow flex-col justify-between p-6">
 						<ul class="mb-8 space-y-4">
@@ -170,11 +186,11 @@
 								</li>
 							{/each}
 						</ul>
-						
+
 						<!-- CTA -->
-						<a 
+						<a
 							href={pricingPlan.buttonHref}
-							target="_blank" 
+							target="_blank"
 							rel="noopener noreferrer"
 							class="group inline-flex w-full items-center justify-center rounded-lg bg-primary px-4 py-2.5 text-center text-sm font-medium text-white shadow-sm transition-all hover:bg-primary-dark hover:shadow"
 						>
@@ -186,15 +202,26 @@
 		</div>
 
 		<!-- Pricing Calculator -->
-		<div class="mt-20 transition-all duration-700 delay-500 ease-out" class:opacity-100={sectionVisible} class:opacity-0={!sectionVisible}>
+		<div
+			class="mt-20 transition-all delay-500 duration-700 ease-out"
+			class:opacity-100={sectionVisible}
+			class:opacity-0={!sectionVisible}
+		>
 			<PricingCalculator />
 		</div>
-		
+
 		<!-- Custom Plan CTA -->
-		<div class="mt-16 text-center transition-all duration-700 delay-700 ease-out" class:opacity-100={sectionVisible} class:opacity-0={!sectionVisible}>
+		<div
+			class="mt-16 text-center transition-all delay-700 duration-700 ease-out"
+			class:opacity-100={sectionVisible}
+			class:opacity-0={!sectionVisible}
+		>
 			<p class="text-gray-600">
 				All prices are in USD. Need a custom plan for high volume?{' '}
-				<a href="mailto:yusril@izza.dev" class="font-medium text-primary transition-colors hover:text-primary-dark hover:underline"> 
+				<a
+					href="mailto:yusril@izza.dev"
+					class="font-medium text-primary transition-colors hover:text-primary-dark hover:underline"
+				>
 					Contact our sales team
 				</a>
 			</p>
