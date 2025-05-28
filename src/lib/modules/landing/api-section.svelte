@@ -38,7 +38,16 @@
 	const languages = Object.keys(apiCallExamples);
 </script>
 
-<section id="api-example" class="px-6 py-24 sm:py-32">
+<section id="api-example" class="relative overflow-hidden px-6 py-24 sm:py-32">
+	<!-- Subtle background gradient spheres -->
+	<div
+		class="absolute right-0 top-20 z-0 h-[500px] w-[500px] rounded-full bg-gradient-to-tl from-blue-50 to-indigo-100/20 opacity-30 blur-3xl animate-pulse"
+		style="animation-duration: 10s;"
+	></div>
+	<div
+		class="absolute -left-20 bottom-20 z-0 h-[350px] w-[350px] rounded-full bg-gradient-to-tr from-primary/5 to-primary/10 opacity-40 blur-3xl animate-pulse"
+		style="animation-duration: 15s;"
+	></div>
 	<div class="container mx-auto">
 		<div 
 			class="mx-auto max-w-4xl transition-all duration-700 ease-out" 

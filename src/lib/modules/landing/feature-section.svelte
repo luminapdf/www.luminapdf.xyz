@@ -71,6 +71,16 @@
 </script>
 
 <section id="features-section" class="relative overflow-hidden px-6 py-24 sm:py-32">
+	<!-- Subtle background gradient spheres -->
+	<div
+		class="absolute -right-20 bottom-40 z-0 h-[400px] w-[400px] rounded-full bg-gradient-to-bl from-primary/5 to-blue-100/20 opacity-40 blur-3xl animate-pulse"
+		style="animation-duration: 8s;"
+	></div>
+	<div
+		class="absolute -left-40 top-20 z-0 h-[600px] w-[600px] rounded-full bg-gradient-to-tr from-indigo-50 to-primary/5 opacity-30 blur-3xl animate-pulse"
+		style="animation-duration: 12s;"
+	></div>
+	
 	<!-- Subtle background accents -->
 	<div class="absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent opacity-60"></div>
 	

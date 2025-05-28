@@ -66,7 +66,16 @@
 	];
 </script>
 
-<section id="faq-section" class="px-6 py-24 sm:py-32">
+<section id="faq-section" class="relative overflow-hidden px-6 py-24 sm:py-32">
+	<!-- Subtle background gradient spheres -->
+	<div
+		class="absolute -right-10 top-20 z-0 h-[500px] w-[500px] rounded-full bg-gradient-to-bl from-blue-50/30 to-indigo-100/20 opacity-40 blur-3xl animate-pulse"
+		style="animation-duration: 12s;"
+	></div>
+	<div
+		class="absolute -left-20 bottom-10 z-0 h-[400px] w-[400px] rounded-full bg-gradient-to-tr from-primary/5 to-primary/10 opacity-30 blur-3xl animate-pulse"
+		style="animation-duration: 15s;"
+	></div>
 	<div class="container mx-auto">
 		<!-- Section header -->
 		<div 

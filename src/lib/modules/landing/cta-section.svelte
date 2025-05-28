@@ -31,7 +31,16 @@
 	];
 </script>
 
-<section id="cta-section" class="px-6 py-24 sm:py-32">
+<section id="cta-section" class="relative overflow-hidden px-6 py-24 sm:py-32">
+	<!-- Animated background gradient spheres -->
+	<div
+		class="absolute right-10 -top-20 z-0 h-[450px] w-[450px] rounded-full bg-gradient-to-bl from-primary/20 to-indigo-300/20 opacity-30 blur-3xl animate-pulse"
+		style="animation-duration: 10s;"
+	></div>
+	<div
+		class="absolute -left-40 bottom-0 z-0 h-[350px] w-[350px] rounded-full bg-gradient-to-tr from-blue-100/20 to-primary/10 opacity-20 blur-3xl animate-pulse"
+		style="animation-duration: 14s;"
+	></div>
 	<div class="container mx-auto">
 		<div 
 			class="overflow-hidden rounded-2xl bg-gradient-to-br from-primary to-primary-dark transition-all duration-700 ease-out sm:rounded-3xl" 

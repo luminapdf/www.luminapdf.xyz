@@ -26,6 +26,16 @@
 <section id="playground-section" class="relative overflow-hidden px-6 py-24 sm:py-32">
 	<div class="absolute inset-0 bg-gradient-to-b from-white to-gray-50"></div>
 	
+	<!-- Animated background gradient spheres -->
+	<div
+		class="absolute right-0 bottom-40 z-0 h-[450px] w-[450px] rounded-full bg-gradient-to-tr from-primary/5 to-blue-100/20 opacity-30 blur-3xl animate-pulse"
+		style="animation-duration: 15s;"
+	></div>
+	<div
+		class="absolute -left-40 top-20 z-0 h-[550px] w-[550px] rounded-full bg-gradient-to-bl from-indigo-50/30 to-primary/5 opacity-20 blur-3xl animate-pulse"
+		style="animation-duration: 18s;"
+	></div>
+	
 	<div class="container relative z-10 mx-auto">
 		<!-- Section header -->
 		<div 

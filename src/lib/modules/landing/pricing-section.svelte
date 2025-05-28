@@ -70,6 +70,16 @@
 
 <section id="pricing-section" class="relative overflow-hidden px-6 py-24 sm:py-32">
 	<div class="absolute inset-0 bg-gradient-to-b from-gray-50 to-white"></div>
+	
+	<!-- Subtle background gradient spheres -->
+	<div
+		class="absolute right-40 top-40 z-0 h-[450px] w-[450px] rounded-full bg-gradient-to-br from-primary/5 to-indigo-100/20 opacity-40 blur-3xl animate-pulse"
+		style="animation-duration: 13s;"
+	></div>
+	<div
+		class="absolute -left-20 bottom-40 z-0 h-[350px] w-[350px] rounded-full bg-gradient-to-tr from-blue-50/50 to-primary/5 opacity-30 blur-3xl animate-pulse"
+		style="animation-duration: 9s;"
+	></div>
 	<div class="container relative z-10 mx-auto">
 		<!-- Section header -->
 		<div 
