@@ -16,13 +16,29 @@
 </script>
 
 <section id="hero" class="py-18 relative overflow-hidden px-6 sm:py-24">
-	<!-- Subtle background gradient sphere */-->
+	<!-- Dot Pattern Background -->
+	<div class="absolute inset-0 z-[1] opacity-60">
+		<div
+			class="h-full w-full"
+			style="background-image: radial-gradient(circle, #cbd5e1 1.5px, transparent 1.5px); background-size: 24px 24px;"
+		></div>
+	</div>
+
+	<!-- Subtle background gradient sphere -->
 	<div
-		class="absolute -right-10 -top-20 z-0 h-[500px] w-[500px] rounded-full bg-gradient-to-br from-primary/5 to-primary/10 blur-3xl"
+		class="absolute -right-10 -top-20 z-[2] h-[500px] w-[500px] rounded-full bg-gradient-to-br from-primary/5 to-primary/10 blur-3xl"
 	></div>
 	<div
-		class="absolute -left-10 bottom-10 z-0 h-[300px] w-[300px] rounded-full bg-gradient-to-tr from-primary/5 to-primary/10 blur-3xl"
+		class="absolute -left-10 bottom-10 z-[2] h-[300px] w-[300px] rounded-full bg-gradient-to-tr from-primary/5 to-primary/10 blur-3xl"
 	></div>
+
+	<!-- Animated dot pattern overlay -->
+	<div class="absolute inset-0 z-[3]">
+		<div
+			class="h-full w-full animate-pulse opacity-40"
+			style="background-image: radial-gradient(circle, #3b82f6 1px, transparent 1px); background-size: 40px 40px; animation-duration: 6s;"
+		></div>
+	</div>
 
 	<div class="container relative z-10 mx-auto">
 		<div class="mx-auto max-w-4xl">
