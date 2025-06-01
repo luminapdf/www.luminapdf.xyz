@@ -4,6 +4,8 @@
 	import ArrowUpRight from 'lucide-svelte/icons/arrow-up-right';
 	import { onMount } from 'svelte';
 
+	import logo from '$lib/assets/logo/lumina-logo.png';
+
 	let sectionVisible = $state(false);
 
 	onMount(() => {
@@ -66,8 +68,10 @@
 		<div class="grid gap-12 md:grid-cols-5 lg:gap-16">
 			<!-- Brand column -->
 			<div class="md:col-span-2">
-				<div class="mb-6">
-					<a href="/" class="font-display text-xl font-semibold text-gray-900">LuminaPDF</a>
+				<div class="-ml-4">
+					<a href="/">
+						<img src={logo} alt="LuminaPDF" width="140" height="50" />
+					</a>
 				</div>
 				<p class="mb-8 max-w-md text-gray-600">
 					Powerful PDF generation and screenshot API designed for developers. Create pixel-perfect documents

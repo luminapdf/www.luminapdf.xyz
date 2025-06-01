@@ -8,12 +8,15 @@
 	import { Card } from '$lib/components/ui/card';
 </script>
 
-<section class="overflow-hidden bg-white px-4 py-24 sm:px-6 md:py-32 lg:px-8">
+<section class="overflow-hidden bg-white px-4 py-24 sm:px-6 md:py-32 lg:px-8" id="use-cases">
 	<div class="container mx-auto max-w-7xl">
 		<div class="mb-16 text-center">
-			<h2 class="mb-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Use Cases</h2>
+			<h2 class="mb-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+				API Use Cases & Applications
+			</h2>
 			<p class="mx-auto max-w-2xl text-lg text-gray-600">
-				See how Luminapdf can transform your document workflow across various scenarios
+				Discover how developers integrate LuminaPDF's API for PDF generation and screenshot capture across
+				different applications and workflows.
 			</p>
 		</div>
 
@@ -26,9 +29,12 @@
 					<FileText class="h-6 w-6" />
 				</div>
 				<h3 class="mb-2 text-xl font-semibold text-gray-900 transition-colors group-hover:text-primary">
-					Generate Reports
+					Automated Report Generation
 				</h3>
-				<p class="text-gray-600">Create polished, shareable PDF reports from structured content.</p>
+				<p class="text-gray-600">
+					Convert HTML reports and dashboards to PDF automatically. Perfect for financial reports, analytics
+					summaries, and business intelligence documents.
+				</p>
 			</Card>
 
 			<!-- Invoice PDF Generation -->
@@ -39,10 +45,11 @@
 					<Receipt class="h-6 w-6" />
 				</div>
 				<h3 class="mb-2 text-xl font-semibold text-gray-900 transition-colors group-hover:text-primary">
-					Invoice PDF Generation
+					Invoice & Receipt Generation
 				</h3>
 				<p class="text-gray-600">
-					Automatically generate professional invoices in PDF before emailing clients.
+					Generate professional PDF invoices, receipts, and billing documents from HTML templates. Ideal for
+					SaaS billing systems and e-commerce platforms.
 				</p>
 			</Card>
 
@@ -54,9 +61,12 @@
 					<Camera class="h-6 w-6" />
 				</div>
 				<h3 class="mb-2 text-xl font-semibold text-gray-900 transition-colors group-hover:text-primary">
-					Screenshot Capture for SEO
+					Website Screenshot API
 				</h3>
-				<p class="text-gray-600">Capture live document snapshots to use as image content for improved SEO.</p>
+				<p class="text-gray-600">
+					Capture website screenshots for social media previews, monitoring tools, and portfolio showcases.
+					High-resolution images with custom viewports.
+				</p>
 			</Card>
 
 			<!-- Client Proposals & Contracts -->
@@ -67,9 +77,12 @@
 					<Handshake class="h-6 w-6" />
 				</div>
 				<h3 class="mb-2 text-xl font-semibold text-gray-900 transition-colors group-hover:text-primary">
-					Client Proposals & Contracts
+					Contract & Proposal PDFs
 				</h3>
-				<p class="text-gray-600">Build customized PDF proposals and agreements on demand.</p>
+				<p class="text-gray-600">
+					Generate dynamic contracts, proposals, and legal documents from templates. Populate with client data
+					and convert to secure PDFs.
+				</p>
 			</Card>
 
 			<!-- Offline PDF Export for Archives -->
@@ -80,10 +93,11 @@
 					<Download class="h-6 w-6" />
 				</div>
 				<h3 class="mb-2 text-xl font-semibold text-gray-900 transition-colors group-hover:text-primary">
-					Offline PDF Export for Archives
+					Document Archival & Export
 				</h3>
 				<p class="text-gray-600">
-					Archive documents by exporting them as standalone PDFs for long-term storage.
+					Archive web content and documents as PDFs for compliance, backup, and long-term storage. Ideal for
+					legal and regulatory requirements.
 				</p>
 			</Card>
 
@@ -95,9 +109,12 @@
 					<Users class="h-6 w-6" />
 				</div>
 				<h3 class="mb-2 text-xl font-semibold text-gray-900 transition-colors group-hover:text-primary">
-					Team Collaboration Snapshots
+					Documentation & Collaboration
 				</h3>
-				<p class="text-gray-600">Share annotated document states via PDF for asynchronous collaboration.</p>
+				<p class="text-gray-600">
+					Generate shareable PDF documentation, user manuals, and onboarding materials from markdown or HTML
+					content.
+				</p>
 			</Card>
 		</div>
 	</div>

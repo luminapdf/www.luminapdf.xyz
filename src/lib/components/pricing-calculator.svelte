@@ -11,7 +11,7 @@
 	const screenshotRate = centsToDollars(Number(PUBLIC_SCREENSHOT_GENERATION_COST));
 
 	// Calculate with free tier (50 free generations)
-	const freeTier = 50;
+	const freeTier = 100;
 
 	// Reactive calculation for costs
 	const paidPdfCount = $derived(Math.max(0, pdfCount - freeTier));
@@ -138,7 +138,7 @@
 			<div class="space-y-1 text-sm text-gray-600">
 				<p>
 					{#if paidPdfCount > 0 || paidScreenshotCount > 0}
-						Includes your first 50 generations free each month
+						Includes your first 100 generations free each month
 					{:else}
 						All generations are free with your current volume
 					{/if}

@@ -31,46 +31,46 @@
 	const features = [
 		{
 			icon: FileJson,
-			title: 'PDF Generation',
+			title: 'HTML to PDF Conversion',
 			description:
-				'Convert any HTML content into pixel-perfect PDFs with precise formatting, custom headers/footers, and pagination support.',
+				'Convert any HTML content, web pages, or documents into pixel-perfect PDFs with precise formatting, custom headers/footers, and advanced pagination control.',
 			chip: 'Core Feature',
 			delay: 0
 		},
 		{
 			icon: Camera,
-			title: 'Screenshot API',
+			title: 'Web Screenshot Capture',
 			description:
-				'Generate high-resolution screenshots with customizable viewports, wait conditions, and device emulation for perfect captures.',
+				'Generate high-resolution screenshots of websites and web pages with customizable viewports, device emulation, and wait conditions for dynamic content.',
 			chip: 'Popular',
 			delay: 100
 		},
 		{
 			icon: Zap,
-			title: 'Lightning Fast',
+			title: 'High-Performance API',
 			description:
-				'Process thousands of documents in parallel with our distributed infrastructure, returning results in milliseconds.',
+				'Process thousands of PDF generations and screenshot captures in parallel with our distributed cloud infrastructure, delivering sub-second response times.',
 			delay: 200
 		},
 		{
 			icon: Cloud,
-			title: 'Cloud Storage',
+			title: 'Secure Cloud Storage',
 			description:
-				'Access your generated documents instantly with secure cloud storage, complete with versioning and expiration control.',
+				'Access generated PDFs and screenshots instantly with secure cloud storage, automatic file management, and configurable retention policies.',
 			delay: 300
 		},
 		{
 			icon: ShieldCheck,
-			title: 'Enterprise Security',
+			title: 'Enterprise Security & Compliance',
 			description:
-				'Bank-grade encryption, GDPR compliance, and SOC 2 certification for secure document handling in any environment.',
+				'Bank-grade encryption, GDPR compliance, SOC 2 certification, and data privacy protection for secure document processing in enterprise environments.',
 			delay: 400
 		},
 		{
 			icon: Code,
-			title: 'Developer First',
+			title: 'Developer Experience',
 			description:
-				'Intuitive API with comprehensive documentation, client libraries for all major languages, and rapid developer support.',
+				'Intuitive REST API with comprehensive documentation, SDK libraries for all major programming languages, and responsive developer support.',
 			delay: 500
 		}
 	];
@@ -133,16 +133,16 @@
 	<div class="container relative z-10 mx-auto">
 		<div class="mb-16 text-center">
 			<Badge variant="outline" class="mb-4 border-primary/30 bg-primary/5 font-medium text-primary"
-				>Features</Badge
+				>API Features</Badge
 			>
 			<h2
 				class="font-display mb-6 bg-gradient-to-br from-gray-900 to-gray-700 bg-clip-text text-center text-3xl font-bold tracking-tight text-transparent sm:text-4xl md:text-5xl"
 			>
-				Everything you need for perfect documents
+				Complete PDF & Screenshot API Solution
 			</h2>
 			<p class="mx-auto max-w-2xl text-lg text-gray-600 sm:text-xl">
-				Our API provides developers with powerful tools to generate pixel-perfect PDFs and screenshots with
-				unmatched reliability and performance.
+				Enterprise-grade PDF generation and screenshot capture API designed for developers. Convert HTML to
+				PDF, capture web screenshots, and integrate document generation into any application.
 			</p>
 		</div>
 

@@ -15,7 +15,8 @@
 	});
 </script>
 
-<section id="hero" class="py-18 relative overflow-hidden px-6 sm:py-24">
+<!-- improved hero section with better SEO heading structure -->
+<section id="hero" class="py-18 relative overflow-hidden px-6 sm:py-24" role="banner">
 	<!-- Dot Pattern Background -->
 	<div class="absolute inset-0 z-[1] opacity-60">
 		<div
@@ -50,18 +51,20 @@
 				class:translate-y-4={!heroVisible}
 			>
 				<Badge variant="outline" class="mb-6 border-primary/30 bg-primary/5 font-medium text-primary"
-					>Free tier available</Badge
+					>Free tier • 100 generations/month</Badge
 				>
 			</div>
 
+			<!-- improved SEO-focused H1 -->
 			<h1
 				class="font-display mb-6 bg-gradient-to-br from-gray-900 to-gray-700 bg-clip-text text-center text-4xl font-bold leading-tight tracking-tight text-transparent transition-all duration-700 ease-out sm:text-6xl md:text-7xl"
 				class:opacity-100={heroVisible}
 				class:opacity-0={!heroVisible}
 			>
-				Distraction-free PDF & screenshot generation
+				PDF Generation & Screenshot API for Developers
 			</h1>
 
+			<!-- improved value proposition with target keywords -->
 			<p
 				class="mx-auto mb-10 max-w-2xl text-center text-lg text-gray-600 transition-all delay-100 duration-700 ease-out sm:text-xl"
 				class:opacity-100={heroVisible}
@@ -69,10 +72,11 @@
 				class:opacity-0={!heroVisible}
 				class:translate-y-4={!heroVisible}
 			>
-				Create pixel-perfect PDFs and screenshots with a developer-first API that's up to 70% more affordable
-				than alternatives.
+				Convert HTML to PDF and capture web screenshots with our REST API. Enterprise-grade reliability,
+				developer-friendly integration, and pricing that's 70% more affordable than Puppeteer alternatives.
 			</p>
 
+			<!-- improved CTA section -->
 			<div
 				class="flex flex-wrap items-center justify-center gap-4 transition-all delay-200 duration-700 ease-out"
 				class:opacity-100={heroVisible}
@@ -84,8 +88,9 @@
 					href={PUBLIC_DASHBOARD_URL}
 					size="lg"
 					class="relative overflow-hidden shadow-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-xl"
+					aria-label="Start using LuminaPDF API for free"
 				>
-					Get Started Now
+					Start Free • 100 Generations
 					<span
 						class="absolute inset-0 -z-10 bg-gradient-to-br from-primary to-primary-dark opacity-0 transition-opacity duration-300 group-hover:opacity-100"
 					></span>
@@ -95,8 +100,9 @@
 					variant="outline"
 					size="lg"
 					class="shadow-sm transition-all duration-300 hover:scale-[1.02] hover:border-primary/50 hover:shadow-md"
+					aria-label="View API documentation and integration guides"
 				>
-					Explore Documentation
+					View API Docs
 				</Button>
 			</div>
 

@@ -38,41 +38,86 @@
 	});
 </script>
 
+<!-- improved accessibility with skip links -->
+<a
+	href="#main-content"
+	class="sr-only z-50 rounded bg-primary px-4 py-2 text-white focus:not-sr-only focus:absolute focus:left-4 focus:top-4"
+>
+	Skip to main content
+</a>
+
 <LandingHeader />
-<main class="min-h-screen bg-gradient-to-b from-white to-gray-50 pt-16">
-	<div class="animate-on-scroll opacity-0 transition-all duration-700 ease-out">
+<!-- improved semantic HTML structure with proper headings hierarchy -->
+<main id="main-content" class="min-h-screen bg-gradient-to-b from-white to-gray-50 pt-16" role="main">
+	<!-- Hero Section - Primary CTA -->
+	<section
+		class="animate-on-scroll opacity-0 transition-all duration-700 ease-out"
+		aria-labelledby="hero-heading"
+	>
 		<HeroSection />
-	</div>
+	</section>
 
-	<div class="animate-on-scroll translate-y-4 opacity-0 transition-all delay-100 duration-700 ease-out">
+	<!-- API Integration Section -->
+	<section
+		class="animate-on-scroll translate-y-4 opacity-0 transition-all delay-100 duration-700 ease-out"
+		aria-labelledby="api-heading"
+	>
 		<ApiSection />
-	</div>
+	</section>
 
-	<div class="animate-on-scroll translate-y-4 opacity-0 transition-all delay-100 duration-700 ease-out">
+	<!-- Live Playground Demo -->
+	<section
+		class="animate-on-scroll translate-y-4 opacity-0 transition-all delay-100 duration-700 ease-out"
+		aria-labelledby="playground-heading"
+	>
 		<PlaygroundSection />
-	</div>
+	</section>
 
-	<div class="animate-on-scroll translate-y-4 opacity-0 transition-all delay-100 duration-700 ease-out">
+	<!-- Core Features -->
+	<section
+		class="animate-on-scroll translate-y-4 opacity-0 transition-all delay-100 duration-700 ease-out"
+		aria-labelledby="features-heading"
+	>
 		<FeatureSection />
-	</div>
+	</section>
 
-	<div class="animate-on-scroll translate-y-4 opacity-0 transition-all delay-100 duration-700 ease-out">
+	<!-- Use Cases & Applications -->
+	<section
+		class="animate-on-scroll translate-y-4 opacity-0 transition-all delay-100 duration-700 ease-out"
+		aria-labelledby="use-cases-heading"
+	>
 		<UseCases />
-	</div>
+	</section>
 
-	<div class="animate-on-scroll translate-y-4 opacity-0 transition-all delay-100 duration-700 ease-out">
+	<!-- Pricing Information -->
+	<section
+		class="animate-on-scroll translate-y-4 opacity-0 transition-all delay-100 duration-700 ease-out"
+		aria-labelledby="pricing-heading"
+	>
 		<PricingSection />
-	</div>
+	</section>
 
-	<div class="animate-on-scroll translate-y-4 opacity-0 transition-all delay-100 duration-700 ease-out">
+	<!-- Developer FAQ -->
+	<section
+		class="animate-on-scroll translate-y-4 opacity-0 transition-all delay-100 duration-700 ease-out"
+		aria-labelledby="faq-heading"
+	>
 		<FaqSection />
-	</div>
+	</section>
 
-	<div class="animate-on-scroll translate-y-4 opacity-0 transition-all delay-100 duration-700 ease-out">
+	<!-- Final CTA -->
+	<section
+		class="animate-on-scroll translate-y-4 opacity-0 transition-all delay-100 duration-700 ease-out"
+		aria-labelledby="cta-heading"
+	>
 		<CtaSection />
-	</div>
+	</section>
 
-	<div class="animate-on-scroll opacity-0 transition-all delay-100 duration-700 ease-out">
+	<!-- Footer -->
+	<footer
+		class="animate-on-scroll opacity-0 transition-all delay-100 duration-700 ease-out"
+		role="contentinfo"
+	>
 		<FooterSection />
-	</div>
+	</footer>
 </main>

@@ -36,7 +36,7 @@
 		price: '$0',
 		description: 'Perfect for prototyping and small projects',
 		features: [
-			'50 generations free every month',
+			'100 generations free every month',
 			'Auto-renewing quota',
 			'Max file size: 2MB',
 			'Timeout: 30 seconds',
@@ -53,7 +53,7 @@
 		price: `From ${formatCurrency(centsToDollars(Number(PUBLIC_SCREENSHOT_GENERATION_COST)))}`,
 		description: 'For production applications and businesses',
 		features: [
-			'50 free generations included monthly',
+			'100 free generations included monthly',
 			`${formatCurrency(centsToDollars(Number(PUBLIC_PDF_GENERATION_COST)))} per PDF generation`,
 			`${formatCurrency(centsToDollars(Number(PUBLIC_SCREENSHOT_GENERATION_COST)))} per screenshot`,
 			'Unlimited file size',
@@ -90,16 +90,16 @@
 			class:translate-y-8={!sectionVisible}
 		>
 			<Badge variant="outline" class="mb-4 border-primary/30 bg-primary/5 font-medium text-primary"
-				>Pricing</Badge
+				>API Pricing</Badge
 			>
 			<h2
 				class="font-display mb-6 bg-gradient-to-br from-gray-900 to-gray-700 bg-clip-text text-center text-3xl font-bold tracking-tight text-transparent sm:text-4xl md:text-5xl"
 			>
-				Simple, transparent pricing
+				Affordable PDF & Screenshot API Pricing
 			</h2>
 			<p class="mx-auto max-w-2xl text-lg text-gray-600 sm:text-xl">
-				Pay only for what you use with no hidden fees or complicated tiers. Get your first 50 generations free
-				every month.
+				Pay-as-you-go pricing for PDF generation and screenshot capture. Start free with 100 monthly
+				generations, then scale with transparent per-use pricing. No hidden fees or monthly commitments.
 			</p>
 		</div>
 

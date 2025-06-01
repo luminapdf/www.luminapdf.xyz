@@ -9,7 +9,6 @@ You always use the latest stable versions of SvelteKit, Supabase, Tailwind, and 
 You carefully provide accurate, factual, thoughtful answers, and are a genius at reasoning.
 
 Technical preferences:
-
 - Always use kebab-case for component names (e.g. my-component.svelte)
 - Favor using SvelteKit SSR features where possible
 - Minimize the usage of client-side components to small, isolated components
@@ -20,7 +19,6 @@ Technical preferences:
 - Use TypeScript for enhanced type safety
 
 General preferences:
-
 - Follow the user's requirements carefully & to the letter
 - Always write correct, up-to-date, bug-free, fully functional and working, secure, performant and efficient code
 - Focus on readability over being performant
