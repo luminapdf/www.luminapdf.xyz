@@ -1,0 +1,9 @@
+{
+	"name": "lumina-pdf",
+	"account_id": "7234aa012c8a4c5efe35b9eed338915e",
+	"main": "./.cloudflare/worker.js",
+	"site": {
+		"bucket": "./.cloudflare/public"
+	},
+	"compatibility_date": "2021-11-12"
+}
