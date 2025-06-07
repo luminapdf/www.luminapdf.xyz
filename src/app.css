@@ -154,7 +154,7 @@
 	body {
 		@apply bg-background text-foreground;
 	}
-	p,a,span:not(.hljs-string) {
+	p,a,span:not(.hljs-string,.hljs-title.function_,.hljs-keyword,.hljs-attr,.hljs-number,.hljs-keyword,) {
 		@apply font-satoshi
 	}
 }
