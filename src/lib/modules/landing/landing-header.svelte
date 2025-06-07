@@ -53,6 +53,7 @@
 			<a href="/" class="font-display group relative text-lg font-semibold text-gray-900">
 				<!-- <span class="relative z-10">LuminaPDF</span> -->
 				<img src={logo} alt="LuminaPDF" width="140" height="50" />
+				<span class="sr-only">LuminaPDF</span>
 				<span
 					class="absolute bottom-0 left-0 h-[5px] w-0 bg-primary/10 transition-all duration-300 ease-out group-hover:w-full"
 				></span>
