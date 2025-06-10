@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { page } from '$app/state';
 	import { PUBLIC_APP_DOMAIN } from '$env/static/public';
 	import { Toaster } from '$lib/components/ui/sonner/index.js';
 
@@ -27,7 +28,7 @@
 		content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
 	/>
 	<meta name="googlebot" content="index, follow" />
-	<link rel="canonical" href="https://luminapdf.xyz" />
+	<link rel="canonical" href="{PUBLIC_APP_DOMAIN}{page.url.pathname}" />
 
 	<!-- Open Graph / Social Media - improved -->
 	<meta property="og:site_name" content="LuminaPDF API" />
